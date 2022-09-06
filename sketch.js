@@ -16,7 +16,7 @@ let classifier;
 let label = "listening";
 
 // Teachable Machine model URL:
-let soundModelURL = 'https://a41789356.github.io/AI-frog/model.json';
+let soundModelURL = 'https://teachablemachine.withgoogle.com/models/h3p9R41J/model.json';
 
 
 function preload() {
@@ -50,5 +50,4 @@ function gotResult(error, results) {
   // The results are in an array ordered by confidence.
   // console.log(results[0]);
   label = results[0].label;
-  ThunkableWebviewerExtension.postMessage(label);
 }
